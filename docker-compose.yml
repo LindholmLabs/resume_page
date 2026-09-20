@@ -1,0 +1,19 @@
+services:
+  resume:
+    build: ./app
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+    develop:
+      watch:
+        - action: sync+restart
+          path: ./app/main.py
+          target: /app/main.py
+        - action: sync
+          path: ./app/index.html
+          target: /app/index.html
+        - action: sync
+          path: ./app/style.css
+          target: /app/style.css
+        - action: rebuild
+          path: ./app/Dockerfile
