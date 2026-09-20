@@ -1,0 +1,3 @@
+cv.lindholmlabs.com {
+	reverse_proxy cv:8000
+}
