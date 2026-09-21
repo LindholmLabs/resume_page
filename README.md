@@ -27,10 +27,10 @@ Treat the site as a document published on the Web, not as a web application.
 ### 2. Application
 
 **REQ-01 — Runtime**\
-Use Python and Flask. Keep all Flask logic in `app/main.py`.
+Use Python and Flask. Keep all Flask logic in `cv/main.py`.
 
 **REQ-02 — Page**\
-The application shall contain exactly one page. Serve the résumé at `/`. Keep HTML in `app/index.html` and CSS in `app/style.css`.
+The application shall contain exactly one page. Serve the résumé at `/`. Keep HTML in `cv/index.html` and CSS in `cv/style.css`.
 
 **REQ-03 — JavaScript**\
 Do not use JavaScript.
@@ -43,8 +43,8 @@ Use this structure:
 /
 ├── .gitignore
 ├── README.md
-├── docker-compose.yml
-└── app/
+├── compose.yml
+└── cv/
     ├── main.py
     ├── Dockerfile
     ├── requirements.txt
@@ -68,7 +68,7 @@ Place the start instructions first.
 Package the application with Docker. `docker compose up -d` shall start the site. Restarting the container shall restore normal operation.
 
 **REQ-07 — Compose Watch**\
-Configure `develop.watch` in `docker-compose.yml`. `docker compose watch` shall detect changes to application files and update or rebuild the service as required.
+Configure `develop.watch` in `compose.yml`. `docker compose watch` shall detect changes to application files and update or rebuild the service as required.
 
 **REQ-08 — Runtime Dependencies**\
 Do not require external CDNs, hosted fonts, analytics, databases, build systems, JavaScript packages, or third-party runtime services.
