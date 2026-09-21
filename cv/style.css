@@ -42,7 +42,8 @@ nav { display: flex; flex-wrap: wrap; gap: 0.5rem 1.4rem; font-size: 0.9rem; }
 a { color: var(--accent-blue); text-underline-offset: 0.18em; }
 a:hover { color: var(--dark-highlight); }
 a:focus-visible { outline: 2px solid var(--dark-highlight); outline-offset: 4px; }
-section { padding: 1.75rem 0; border-bottom: 1px solid var(--light-highlight); }
+section { padding: 1.75rem 0; }
+section:not(:last-of-type) { border-bottom: 1px solid var(--light-highlight); }
 section > :last-child, article > :last-child { margin-bottom: 0; }
 article + article { margin-top: 1.5rem; }
 .entry-meta { margin-bottom: 0.65rem; font-size: 0.85rem; }
