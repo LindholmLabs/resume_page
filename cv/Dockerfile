@@ -9,7 +9,7 @@ RUN pip install --no-cache-dir -r requirements.txt \
     && useradd --uid 10001 --create-home resume \
     && chown resume:resume /app
 
-COPY --chown=resume:resume main.py index.html style.css ./
+COPY --chown=resume:resume main.py index.html style.css robots.txt sitemap.xml ./
 USER resume
 EXPOSE 8000
 CMD ["python", "main.py"]

@@ -18,6 +18,16 @@ def stylesheet():
     return send_from_directory(app.root_path, "style.css")
 
 
+@app.get("/robots.txt")
+def robots():
+    return send_from_directory(app.root_path, "robots.txt", mimetype="text/plain")
+
+
+@app.get("/sitemap.xml")
+def sitemap():
+    return send_from_directory(app.root_path, "sitemap.xml", mimetype="application/xml")
+
+
 def duration(start, end=None):
     start = date.fromisoformat(f"{start}-01")
     finish = date.fromisoformat(f"{end}-01") if end else date.today()

@@ -76,6 +76,8 @@ Use this structure:
     ├── Dockerfile
     ├── requirements.txt
     ├── index.html
+    ├── robots.txt
+    ├── sitemap.xml
     └── style.css
 ```
 
