@@ -47,6 +47,7 @@ Use this structure:
 └── app/
     ├── main.py
     ├── Dockerfile
+    ├── requirements.txt
     ├── index.html
     └── style.css
 ```
