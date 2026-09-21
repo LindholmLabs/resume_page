@@ -27,7 +27,7 @@ body {
 
 header { border-bottom: 2px solid var(--dark-background); padding-bottom: 1.5rem; }
 
-h1, h2, h3, nav, .document-label, .entry-meta, dt, footer {
+h1, h2, h3, nav, .document-label, .entry-meta, dt {
   font-family: var(--font-heading);
 }
 
@@ -37,7 +37,6 @@ h2 { margin: 0 0 1rem; font-size: 1.25rem; }
 h3 { margin: 0 0 0.25rem; font-size: 1rem; font-weight: 650; }
 p { margin: 0 0 0.8rem; }
 .document-label { margin: 0; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; }
-.sample-marker { font-size: 0.75rem; font-weight: 400; vertical-align: middle; }
 .subtitle { margin-bottom: 1.25rem; }
 nav { display: flex; flex-wrap: wrap; gap: 0.5rem 1.4rem; font-size: 0.9rem; }
 a { color: var(--accent-blue); text-underline-offset: 0.18em; }
@@ -54,21 +53,24 @@ dt { font-size: 0.9rem; font-weight: 650; }
 dd { margin: 0 0 0.75rem; }
 dd:last-child { margin-bottom: 0; }
 address { font-style: normal; }
-footer { padding-top: 1.25rem; font-size: 0.8rem; }
 .skip-link { position: absolute; top: -5rem; padding: 0.5rem; background: var(--paper); }
 .skip-link:focus { top: 0.5rem; }
 
-@media (max-width: 36rem) {
+@media screen and (max-width: 36rem) {
   body { padding: 1.5rem 1rem; }
   h1 { font-size: 1.8rem; }
-  .sample-marker { display: block; }
   section { padding: 1.5rem 0; }
 }
 
 @media print {
-  body { max-width: none; padding: 0; font-size: 10pt; }
+  @page { margin: 15mm; }
+  body { max-width: none; padding: 0; font-size: 11pt; line-height: 1.4; }
+  header { padding-bottom: 0.75rem; }
+  section { padding: 1rem 0; }
   nav, .skip-link { display: none; }
   a { color: var(--primary-text); }
-  h2, h3 { break-after: avoid; }
-  article { break-inside: avoid; }
+  a[href^="https://"]::after { content: " (" attr(href) ")"; font-size: 0.85em; }
+  h1, h2, h3, dt, .entry-meta { break-after: avoid; }
+  article, address { break-inside: avoid; }
+  p, li, dd { orphans: 3; widows: 3; }
 }
