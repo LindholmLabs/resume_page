@@ -1,1 +1,17 @@
 https://github.com/LindholmLabs/DSA-Assignments.git
+https://github.com/LindholmLabs/resume_page.git
+https://github.com/LindholmLabs/fpga_labs.git
+https://github.com/LindholmLabs/Neural-Computing.git
+https://github.com/LindholmLabs/Online-TicTacToe.git
+https://github.com/LindholmLabs/Embedded-Software-Projects.git
+https://github.com/LindholmLabs/ContactBridge.git
+https://github.com/LindholmLabs/SimpleMessagingService.git
+https://github.com/LindholmLabs/golanglabs.git
+https://github.com/LindholmLabs/LenaSYS-dockerenv.git
+https://github.com/LindholmLabs/USBDetective.git
+https://github.com/LindholmLabs/MVC-databaskonstruktion.git
+https://github.com/LindholmLabs/PHP-databaskonstruktion.git
+https://github.com/LindholmLabs/boredbutton3.git
+https://github.com/LindholmLabs/Hangman.git
+https://github.com/LindholmLabs/OOP-Projects-Java.git
+https://github.com/LindholmLabs/MeteoriteDB.git
