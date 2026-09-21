@@ -1,3 +1,8 @@
 cv.lindholmlabs.com {
 	reverse_proxy cv:8000
 }
+
+git.lindholmlabs.com, http://localhost {
+	root * /www/current
+	file_server
+}

@@ -7,6 +7,7 @@ services:
       - "443:443"
     volumes:
       - ./caddy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - stagit_www:/www:ro
     depends_on:
       - cv
 
@@ -30,3 +31,16 @@ services:
           path: ./cv/Dockerfile
         - action: rebuild
           path: ./cv/requirements.txt
+
+  stagit:
+    build: ./stagit
+    restart: unless-stopped
+    init: true
+    volumes:
+      - ./stagit:/config:ro
+      - stagit_git:/git
+      - stagit_www:/www
+
+volumes:
+  stagit_git:
+  stagit_www:

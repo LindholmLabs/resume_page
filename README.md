@@ -14,6 +14,23 @@ To start with automatic application updates during development, run:
 docker compose watch
 ```
 
+# Git frontend
+
+Add one public HTTPS clone URL per line to `stagit/repos.txt`. Repository names
+must be unique. Run `docker compose up -d --build`, then open <http://localhost>.
+The same pages are served at <https://git.lindholmlabs.com> in production.
+
+The stagit container clones or fetches immediately, generates static pages, then
+sleeps for 24 hours. Restart it with `docker compose restart stagit` to sync now.
+Mirrors and generated pages persist in named volumes. Unavailable remotes keep
+their last local copy; removing a URL does not delete its mirror. Caddy serves the
+completed output read-only; stagit exposes no ports.
+
+The Git pages use local copies of Codemadness's
+[stylesheet](https://codemadness.org/git/style.css),
+[favicon](https://codemadness.org/git/favicon.png), and
+[logo](https://codemadness.org/git/logo.png).
+
 # Software Requirements Specification
 
 ## Personal Résumé Website
@@ -42,8 +59,18 @@ Use this structure:
 ```
 /
 ├── .gitignore
+├── .gitattributes
 ├── README.md
 ├── compose.yml
+├── caddy/
+│   └── Caddyfile
+├── stagit/
+│   ├── Dockerfile
+│   ├── sync.sh
+│   ├── repos.txt
+│   ├── style.css
+│   ├── favicon.png
+│   └── logo.png
 └── cv/
     ├── main.py
     ├── Dockerfile
@@ -58,7 +85,8 @@ Do not add directories.
 The README shall contain only:
 
 1. Instructions to start the container.
-2. This SRS.
+2. Git frontend instructions.
+3. This SRS.
 
 Place the start instructions first.
 
