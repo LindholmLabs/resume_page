@@ -47,9 +47,9 @@ def duration(start, end=None):
     length = ", ".join(filter(None, parts))
 
     if end is None:
-        return Markup(f'<time datetime="{start:%Y-%m}">{start.strftime("%B")} {start.year} – Present · {length}')
+        return Markup(f'<time datetime="{start:%Y-%m}">{start.strftime("%B")} {start.year}</time> – Present · {length}')
 
-    return Markup(f'<time datetime="{start:%Y-%m}">{start.strftime("%B")} {start.year} – <time datetime="{finish:%Y-%m}">{finish.strftime("%B")} {finish.year}</time> · {length}')
+    return Markup(f'<time datetime="{start:%Y-%m}">{start.strftime("%B")} {start.year}</time> – <time datetime="{finish:%Y-%m}">{finish.strftime("%B")} {finish.year}</time> · {length}')
 
 
 if __name__ == "__main__":
