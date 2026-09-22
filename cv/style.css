@@ -68,7 +68,7 @@ kbd { margin-inline: 0.1rem; padding: 0.1rem 0.3rem; border: 1px solid var(--dar
 }
 
 @media print {
-  @page { margin: 15mm; }
+  @page { margin: 15mm; size: A4; }
   body { max-width: none; padding: 0; font-size: 11pt; line-height: 1.4; }
   header { padding-bottom: 0.75rem; }
   section { padding: 1rem 0; }
@@ -78,4 +78,10 @@ kbd { margin-inline: 0.1rem; padding: 0.1rem 0.3rem; border: 1px solid var(--dar
   h1, h2, h3, dt, .entry-meta { break-after: avoid; }
   article, address { break-inside: avoid; }
   p, li, dd { orphans: 3; widows: 3; }
+}
+
+.external-link-icon {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  font-variant-emoji: text;
 }
