@@ -23,6 +23,11 @@ def robots():
     return send_from_directory(app.root_path, "robots.txt", mimetype="text/plain")
 
 
+@app.get("/favicon.svg")
+def favicon():
+    return send_from_directory(app.root_path, "favicon.svg", mimetype="image/svg+xml")
+
+
 @app.get("/sitemap.xml")
 def sitemap():
     return send_from_directory(app.root_path, "sitemap.xml", mimetype="application/xml")

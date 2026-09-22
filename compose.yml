@@ -29,6 +29,9 @@ services:
           path: ./cv/style.css
           target: /app/style.css
         - action: sync
+          path: ./cv/favicon.svg
+          target: /app/favicon.svg
+        - action: sync
           path: ./cv/robots.txt
           target: /app/robots.txt
         - action: sync
