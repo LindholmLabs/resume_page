@@ -57,6 +57,7 @@ dd { margin: 0 0 0.75rem; }
 dd:last-child { margin-bottom: 0; }
 address { font-style: normal; }
 .skip-link { position: absolute; top: -5rem; padding: 0.5rem; background: var(--paper); }
+#projects ~ p { margin-top: 1rem; } 
 .skip-link:focus { top: 0.5rem; }
 kbd { margin-inline: 0.1rem; padding: 0.1rem 0.3rem; border: 1px solid var(--dark-highlight); border-radius: 3px; font-size: 0.9rem; }
 
