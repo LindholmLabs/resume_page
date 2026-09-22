@@ -76,7 +76,7 @@ kbd { margin-inline: 0.1rem; padding: 0.1rem 0.3rem; border: 1px solid var(--dar
   a { color: var(--primary-text); }
   a[href^="https://"]::after { content: " (" attr(href) ")"; font-size: 0.85em; }
   h1, h2, h3, dt, .entry-meta { break-after: avoid; }
-  article, address { break-inside: avoid; }
+  article, address, .do-not-break { break-inside: avoid; }
   p, li, dd { orphans: 3; widows: 3; }
 }
 
