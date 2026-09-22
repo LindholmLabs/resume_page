@@ -1,0 +1,11 @@
+{
+  "name": "resume-linting",
+  "private": true,
+  "dependencies": {
+    "cspell": "8.17.5",
+    "htmlhint": "1.1.4",
+    "stylelint": "16.14.1",
+    "stylelint-config-recommended": "14.0.1",
+    "write-good": "1.0.8"
+  }
+}

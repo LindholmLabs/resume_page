@@ -1,0 +1,10 @@
+{
+  "version": "0.2",
+  "language": "en,en-GB",
+  "useGitignore": false,
+  "words": [
+    "AGV", "AGVs", "Blazor", "BSc", "CCNAv7", "Combitech", "DiVA",
+    "HAREC", "Homelabbing", "Lindholm", "OrionCast", "Proxmox",
+    "Skövde", "Stagit", "TFVC"
+  ]
+}

@@ -14,6 +14,9 @@ To start with automatic application updates during development, run:
 docker compose watch
 ```
 
+For containerized local checks and GitHub Actions linting, see
+[linting/README.md](linting/README.md).
+
 # Git frontend
 
 Add one public HTTPS clone URL per line to `stagit/repos.txt`. Repository names
@@ -81,7 +84,8 @@ Use this structure:
     └── style.css
 ```
 
-Do not add directories.
+Application directories follow the layout above. Development linting tools live
+in `linting/`, with GitHub Actions workflows in `.github/workflows/`.
 
 **REQ-05 — README**\
 The README shall contain only:

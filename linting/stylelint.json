@@ -1,0 +1,3 @@
+{
+  "extends": "/opt/lint/node_modules/stylelint-config-recommended"
+}

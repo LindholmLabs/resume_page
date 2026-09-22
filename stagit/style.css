@@ -37,12 +37,12 @@ a.line {
 	text-decoration: none;
 }
 
-table thead td {
-	font-weight: bold;
-}
-
 table td {
 	padding: 0 0.4em;
+}
+
+table thead td {
+	font-weight: bold;
 }
 
 #content table td {
