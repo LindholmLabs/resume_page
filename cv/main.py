@@ -10,7 +10,7 @@ app = Flask(__name__, static_folder=None, template_folder=".")
 
 @app.get("/")
 def resume():
-    return render_template("index.html", duration=duration)
+    return render_template("index.html", duration=duration, current_year=date.today().year)
 
 
 @app.get("/style.css")
@@ -46,7 +46,10 @@ def duration(start, end=None):
     ]
     length = ", ".join(filter(None, parts))
 
-    return Markup(f'<time datetime="{start:%Y-%m}">{start.year}</time> · {length}')
+    if end is None:
+        return Markup(f'<time datetime="{start:%Y-%m}">{start.strftime("%B")} {start.year} – Present · {length}')
+
+    return Markup(f'<time datetime="{start:%Y-%m}">{start.strftime("%B")} {start.year} – <time datetime="{finish:%Y-%m}">{finish.strftime("%B")} {finish.year}</time> · {length}')
 
 
 if __name__ == "__main__":
