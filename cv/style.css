@@ -27,6 +27,8 @@ body {
 
 header { border-bottom: 2px solid var(--dark-background); padding-bottom: 1.5rem; }
 
+footer { margin-top: 1.75rem; padding-top: 1.75rem; border-top: 1px solid var(--light-highlight); font-size: 0.9rem; }
+
 h1, h2, h3, nav, .document-label, .entry-meta, dt {
   font-family: var(--font-heading);
 }
@@ -56,6 +58,7 @@ dd:last-child { margin-bottom: 0; }
 address { font-style: normal; }
 .skip-link { position: absolute; top: -5rem; padding: 0.5rem; background: var(--paper); }
 .skip-link:focus { top: 0.5rem; }
+kbd { margin-inline: 0.1rem; padding: 0.1rem 0.3rem; border: 1px solid var(--dark-highlight); border-radius: 3px; font-size: 0.9rem; }
 
 @media screen and (max-width: 36rem) {
   body { padding: 1.5rem 1rem; }
@@ -68,7 +71,7 @@ address { font-style: normal; }
   body { max-width: none; padding: 0; font-size: 11pt; line-height: 1.4; }
   header { padding-bottom: 0.75rem; }
   section { padding: 1rem 0; }
-  nav, .skip-link { display: none; }
+  nav, .skip-link, .skip-print { display: none; }
   a { color: var(--primary-text); }
   a[href^="https://"]::after { content: " (" attr(href) ")"; font-size: 0.85em; }
   h1, h2, h3, dt, .entry-meta { break-after: avoid; }
