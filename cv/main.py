@@ -12,6 +12,9 @@ app = Flask(__name__, static_folder=None, template_folder=".")
 def security_headers(response):
     response.headers["Content-Security-Policy"] = (
         "default-src 'none'; style-src 'self'; img-src 'self'; "
+        "script-src https://cloudflare.com https://*.cloudflare.com "
+        "https://cloudflareinsights.com https://*.cloudflareinsights.com; "
+        "connect-src https://cloudflareinsights.com https://*.cloudflareinsights.com; "
         "base-uri 'none'; form-action 'none'; frame-ancestors 'none'"
     )
     response.headers["Strict-Transport-Security"] = "max-age=31536000"
