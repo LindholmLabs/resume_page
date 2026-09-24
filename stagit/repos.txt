@@ -16,3 +16,4 @@ https://github.com/LindholmLabs/Hangman.git
 https://github.com/LindholmLabs/OOP-Projects-Java.git
 https://github.com/LindholmLabs/MeteoriteDB.git
 https://github.com/LindholmLabs/minesweeper_bot.git
+https://github.com/LindholmLabs/cloudflare_status_bot.git
