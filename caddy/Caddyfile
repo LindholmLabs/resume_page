@@ -1,8 +1,18 @@
+(security_headers) {
+	# Allow HTTPS scripts and analytics requests, including Cloudflare's injected scripts.
+	header >Content-Security-Policy "default-src 'self'; style-src 'self'; img-src 'self'; script-src 'self' https: 'unsafe-inline'; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'"
+	header >Strict-Transport-Security "max-age=31536000"
+	header >X-Content-Type-Options "nosniff"
+	header >Referrer-Policy "no-referrer"
+}
+
 cv.lindholmlabs.com {
+	import security_headers
 	reverse_proxy cv:8000
 }
 
 git.lindholmlabs.com, http://localhost {
+	import security_headers
 	root * /www/current
 	file_server
 }

@@ -8,20 +8,6 @@ from markupsafe import Markup
 app = Flask(__name__, static_folder=None, template_folder=".")
 
 
-@app.after_request
-def security_headers(response):
-    response.headers["Content-Security-Policy"] = (
-        "default-src 'self'; style-src 'self'; img-src 'self'; "
-        "script-src 'self' https: 'unsafe-inline'; "
-        "connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; "
-        "base-uri 'none'; form-action 'none'; frame-ancestors 'none'"
-    )
-    response.headers["Strict-Transport-Security"] = "max-age=31536000"
-    response.headers["X-Content-Type-Options"] = "nosniff"
-    response.headers["Referrer-Policy"] = "no-referrer"
-    return response
-
-
 @app.get("/")
 def resume():
     return render_template("index.html", duration=duration, current_year=date.today().year)
