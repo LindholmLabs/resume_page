@@ -15,3 +15,4 @@ https://github.com/LindholmLabs/boredbutton3.git
 https://github.com/LindholmLabs/Hangman.git
 https://github.com/LindholmLabs/OOP-Projects-Java.git
 https://github.com/LindholmLabs/MeteoriteDB.git
+https://github.com/LindholmLabs/minesweeper_bot.git
